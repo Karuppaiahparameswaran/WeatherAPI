@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slide Navbar</title>
+    <!--<link rel="stylesheet" type="text/css" href="login.component.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <!-- <button routerLink="/home">Go to Home</button> -->
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <p>{{emailexist}}</p>
+                <div id="error-message"></div>
+                <div>
+                    <input type="text" name="txt" placeholder="User name" [(ngModel)]=" signupObj.username">
+
+                    <input type="email" name="email" placeholder="Email" required="" [(ngModel)]=" signupObj.email">
+
+                    <input [type]="showpwd?'text':'password'" name="pswd" placeholder="Password" required=""
+                        [(ngModel)]=" signupObj.password">
+                    <i class="fa fa-eye" style="margin-left: 270px;margin-top:-50px; position:absolute" *ngIf="showpwd" (click)="passwordToggle()"></i>
+                    <i class="fa fa-eye-slash" style="margin-left: 270px;margin-top:-50px; position:absolute"*ngIf="!showpwd" (click)="passwordToggle()"></i>
+                </div>
+                <div id="error-message2"></div>
+
+                <button (click)="OnSignup()">Sign up</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+
+                <div id="error-message1"></div>
+                <p>{{ invaliduser }}</p>
+                <input type="email" name="Username" placeholder="Username" required="" [(ngModel)]=" loginObj.username">
+                <input [type]="showpwd?'text':'password'" name="pswd" placeholder="Password" required="" [(ngModel)]=" loginObj.password">
+                <i class="fa fa-eye" style="margin-left: 270px;margin-top:-50px; position:absolute" *ngIf="showpwd" (click)="passwordToggle()"></i>
+                <i class="fa fa-eye-slash" style="margin-left: 270px;margin-top:-50px; position:absolute"*ngIf="!showpwd" (click)="passwordToggle()"></i>
+                <button (click)="Onlogin()">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

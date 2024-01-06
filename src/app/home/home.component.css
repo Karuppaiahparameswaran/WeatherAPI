@@ -1,0 +1,142 @@
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    width: 800px;
+    height: 80vh;
+    background-color: rgba(86, 244, 139, 0.5);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    }
+.weather{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.more{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.weather img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.data{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.405);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.loco{
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+
+}
+.temp{
+  color: white;
+  font-size:4em;
+  text-align: center;
+  font-weight: 900;
+
+}
+.label{
+    color: white;
+}
+.morecon{
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.382);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.info-block{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
+.info-label{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+}
+.info-label img{
+    width: 3em;
+
+}
+.info-label span{
+    color: white;
+    font-size: 0.8em;
+}
+.info-value{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color:white ;
+}
+form{
+    position: absolute;
+    margin-top: -330px;
+    margin-left: -150px;
+}
+input{
+    width: 300px;
+    height:40px;
+    border-radius: 30px;
+    background-color: rgb(255, 85, 85);
+    border-color:transparent;
+   padding:12px 20px;
+}
+::placeholder{
+    color: black;
+    padding: 2px;
+}
+button{
+    border-radius: 30px;
+    width: 100px;
+    height:40px;
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
